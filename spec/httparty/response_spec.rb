@@ -4,7 +4,6 @@ describe HTTParty::Response do
   before do
     @last_modified = Date.new(2010, 1, 15).to_s
     @content_length = '1024'
-    @response_object = {'foo' => 'bar'}
     @response_object = Net::HTTPOK.new('1.1', 200, 'OK')
     @response_object.stub(:body => "{foo:'bar'}")
     @response_object['last-modified'] = @last_modified
